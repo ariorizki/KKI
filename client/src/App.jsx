@@ -23,6 +23,8 @@ function App() {
         </button>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
+
+          WEBSITE INI UNTUK PROJECT KKI
         </p>
       </div>
       <p className="read-the-docs">
