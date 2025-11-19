@@ -16,6 +16,7 @@
     "@mui/icons-material": "^7.3.5",
     "@mui/material": "^7.3.5",
     "@supabase/supabase-js": "^2.81.1",
+    "@toolpad/core": "^0.16.0",
     "axios": "^1.13.1",
     "clsx": "^2.1.1",
     "motion": "^12.23.24",
