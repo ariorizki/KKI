@@ -96,31 +96,35 @@ import { AppProvider } from '@toolpad/core/AppProvider';
 import { SignInPage } from '@toolpad/core/SignInPage';
 import { useTheme } from '@mui/material/styles';
 import { supabase } from '../lib/supabaseClient';
+import { useNavigate } from 'react-router-dom';
 
 const providers = [{ id: 'credentials', name: 'Email and password' }];
 
-const signIn = async (provider, formData) => {
-  const email = formData?.get('email');
-  const password = formData?.get('password');
-
-  const { error } = await supabase.auth.signInWithPassword({
-    email,
-    password,
-  });
-
-   if (error) {
-    return {
-      error: 'Invalid credentials',
-    };
-  }
-
-  // Redirect ke dashboard
-  window.location.href = '/dashboard';
-  return {};
-};
 
 export default function NotificationsSignInPageError() {
   const theme = useTheme();
+  const navigate = useNavigate();
+    
+  const signIn = async (provider, formData) => {
+    const email = formData?.get('email');
+    const password = formData?.get('password');
+    
+    const { error } = await supabase.auth.signInWithPassword({
+      email,
+      password,
+    });
+
+    if (error) {
+      return {
+        error: 'Invalid credentials',
+      };
+    }
+
+    // Redirect ke dashboard
+    navigate('/dashboard'); // redirect setelah login
+    return {};
+
+};
   return (
     // preview-start
     <AppProvider theme={theme}>
