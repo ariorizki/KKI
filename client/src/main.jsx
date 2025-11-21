@@ -6,7 +6,7 @@ import LoginPage from './pages/Login';
 import RegisterPage from './pages/Register';
 
 // Layout Dashboard (berisi sidebar + outlet)
-import DashboardLayout from './components/DashboardLayout';
+import DashboardLayout from './components/DashboardAppLayout';
 
 // Halaman-halaman di dalam dashboard
 import SalesOrderPage from './pages/SalesOrder';

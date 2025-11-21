@@ -151,7 +151,7 @@ export default function DashboardLayout() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Manufaktur Dashboard
+            Aplikasi Manufaktur Dashboard
           </Typography>
         </Toolbar>
       </AppBar>
